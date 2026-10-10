@@ -1,92 +1,137 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+  <title>Happy Birthday Aurora Bebrian! 🤍</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Handlee&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Animate.css & FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="./img/hbd.png">
-  <title>Happy Birthday!</title>
 </head>
 
 <body>
-  <audio id="background-music" src="./music/monokrom.mp3" preload="auto">
-  </audio>
+  <!-- Background Music: Monokrom by Tulus -->
+  <audio id="background-music" src="./music/monokrom.mp3" preload="auto" loop></audio>
 
   <div class="bg" id="content">
 
-    <div class="container" id="timer">
-      <h5>Countdown to <x id='name'></x> birthday :</h5>
-      <ul>
-        <li><span id="days"></span>days</li>
-        <li><span id="hours"></span>Hours</li>
-        <li><span id="minutes"></span>Minutes</li>
-        <li><span id="seconds"></span>Seconds</li>
+    <!-- Countdown Timer Container -->
+    <div class="timer-card animate__animated animate__fadeIn d-none" id="timer">
+      <div class="timer-badge">SPECIAL DAY 🎂</div>
+      <h3 class="timer-title">Countdown to <span id="name">Aurora Bebrian</span>'s Birthday</h3>
+      <ul class="countdown-list">
+        <li><span id="days">0</span>Hari</li>
+        <li><span id="hours">0</span>Jam</li>
+        <li><span id="minutes">0</span>Menit</li>
+        <li><span id="seconds">0</span>Detik</li>
       </ul>
+      <p class="timer-subtitle">Menghitung detik menuju hari bahagiamu ✨</p>
     </div>
 
-    <div id="slideSatu" class="animate__animated animate__slideInDown animate__slow d-none">
-      <img src="./img/hbd1.png" class="img">
-    </div>
-
-    <div id="slideDua"
-      class="slides d-none paper animate__zoomInDown animate__animated animate__delay-2s animate__slow">
-      <div class="paper-content">
-        <p id="teks1" class="teks"></p>
-      </div>
-    </div>
-
-    <div id="slideTiga" class="slides d-none paper animate__fadeInRight animate__animated">
-      <div class="paper-content">
-        <p id="teks2" class="teks"></p>
-      </div>
-    </div>
-
-    <div class="kotak d-none slides animate__animated animate__fadeInDown animate__delay-2s" id="slideEmpat">
-      <div class="row">
-        <div class="col-sm mt-1">
-          <h5>Kamu suka nggak?</h5>
+    <!-- Slide 1: Pembuka Foto Araa & Ucapan Hangat -->
+    <div id="slideSatu" class="slides animate__animated animate__zoomIn d-none">
+      <div class="profile-card">
+        <div class="photo-frame-wrapper">
+          <div class="photo-glow"></div>
+          <img src="./photo/IMG-20260616-WA0049.jpg" alt="Aurora Bebrian" class="profile-photo">
+          <div class="birthday-tag">🎂 10 Oktober</div>
         </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col-4 offset-2">
-          <button id="gak" class="btn btn-outline-danger"> Gak! </button>
-        </div>
-        <div class="col-4">
-          <button id="suka" class="btn btn-outline-info"> Suka!! </button>
+        <h2 class="greeting-title">Happy Birthday, Araa! 🤍✨</h2>
+        <h5 class="greeting-sub">Aurora Bebrian (Dedekkk)</h5>
+        <p class="greeting-text">Hari ini harinya Araa, hari waktu orang sebaik Araa lahir ke dunia.</p>
+        <div class="tap-hint animate__animated animate__pulse animate__infinite">
+          <i class="fas fa-hand-pointer mr-1"></i> Ketuk untuk membuka surat 💌
         </div>
       </div>
     </div>
 
-    <div id="slideLima" class="d-none animate__bounceIn animate__animated animate__slow">
-      <i class="fas fa-heart fa-5x text-danger"></i>
+    <!-- Slide 2: Surat Panjang & Menyentuh dari Halim -->
+    <div id="slideDua" class="slides d-none paper animate__animated animate__fadeIn">
+      <div class="paper-header">
+        <div class="paper-pin"><i class="fas fa-heart text-danger"></i></div>
+        <div class="paper-meta">
+          <span class="sender-info">💌 Dari Halim untuk Araa</span>
+          <button id="btnSkipType" class="btn-skip" type="button" title="Langsung tampilkan seluruh surat">
+            <i class="fas fa-bolt"></i> Langsung Baca Semua
+          </button>
+        </div>
+      </div>
+      <div class="paper-content" id="paperScroll">
+        <div id="typedLetter" class="letter-body"></div>
+      </div>
+      <div class="paper-footer" id="paperFooter">
+        <button id="btnLanjutLetter" class="btn btn-lanjut animate__animated animate__pulse animate__infinite d-none" type="button">
+          Lanjut ke Pesan Berikutnya <i class="fas fa-arrow-right ml-1"></i>
+        </button>
+      </div>
     </div>
-    <p id="trims" class="text-muted d-none mt-2"></p>
 
-    <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">Ketuk untuk
-      melanjutkan</p>
-    <!-- Footer -->
-    <footer class="page-footer font-small blue fixed-bottom">
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
-  <script src="https://kit.fontawesome.com/61e5120832.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-  <script src="https://momentjs.com/downloads/moment.js"></script>
-  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-  <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+    <!-- Slide 3: Pertanyaan Interaktif "Kamu suka nggak?" -->
+    <div class="kotak d-none slides animate__animated animate__zoomIn" id="slideEmpat">
+      <div class="card-inner">
+        <div class="question-icon">🥺🤍</div>
+        <h4 class="question-title">Gimana Araa, kamu suka nggak?</h4>
+        <p class="question-sub text-muted">Jawab yang jujur yaa hehehe...</p>
+        <div class="button-area" id="buttonArea">
+          <button id="gak" class="btn btn-dodge" type="button"> Gak! 😜 </button>
+          <button id="suka" class="btn btn-love" type="button"> Suka Banget!! 🤍🥰 </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Penutup & Galeri Polaroid Kenangan Araa -->
+    <div id="slideLima" class="slides d-none animate__animated animate__fadeIn">
+      <div class="closing-card">
+        <div class="heart-pulse-box">
+          <i class="fas fa-heart fa-3x text-danger animate__animated animate__heartBeat animate__infinite"></i>
+        </div>
+        
+        <div class="closing-message">
+          <h4 id="trimsTitle">Terima kasih, Araa 🤍</h4>
+          <p id="trimsSub" class="closing-desc">
+            Terima kasih sudah lahir dan bertahan sampai sejauh ini, Araa. Selalu bahagia yaa! 🤍<br>
+            <span class="closing-sender">— dari Halim</span>
+          </p>
+        </div>
+
+        <!-- Polaroid Carousel Kenangan -->
+        <div class="polaroid-section">
+          <div class="polaroid-wrapper">
+            <div class="polaroid-card" id="polaroidCard">
+              <div class="polaroid-photo-box">
+                <img id="polaroidImg" src="./photo/1791639484222.JPG" alt="Kenangan Araa">
+              </div>
+              <p class="polaroid-caption" id="polaroidCaption">Araa yang manis 🤍</p>
+            </div>
+            
+            <div class="polaroid-nav">
+              <button id="prevPhoto" class="btn-nav" type="button" aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+              <span id="photoCounter" class="photo-counter">1 / 8</span>
+              <button id="nextPhoto" class="btn-nav" type="button" aria-label="Selanjutnya"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <p class="final-wish">Stay healthy and be kind to yourself. Aamiin ya rabbal alamiin 🤍🫂</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- jQuery & Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 
