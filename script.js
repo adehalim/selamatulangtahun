@@ -36,16 +36,197 @@ const CONFIG = {
     "selamat ulang tahun araaa, jangan lupa bahagia yaa dedekkk. stay healthy and be kind to yourself. aamiin ya rabbal alamiin 🤍🫂"
   ],
 
-  // Foto-foto kenangan di folder photo untuk Polaroid Gallery
-  galleryPhotos: [
-    { src: "./photo/1791639484222.JPG", caption: "Araa yang manis 🤍" },
-    { src: "./photo/IMG-20260915-WA0002.jpg", caption: "Senyum terus yaa dedekkk ✨" },
-    { src: "./photo/IMG-20260918-WA0000.jpg", caption: "Tetap jadi diri sendiri 🌸" },
-    { src: "./photo/IMG-20260919-WA0001.jpg", caption: "Semangat PPL & kuliahnya! 📚" },
-    { src: "./photo/IMG-20260921-WA0013.jpg", caption: "Semoga bahagia selalu 🌻" },
-    { src: "./photo/IMG-20260921-WA0014.jpg", caption: "Orang baik layak bahagia 🤍" },
-    { src: "./photo/IMG-20260922-WA0004.jpg", caption: "Take care of yourself, Araa 🫶🏻" },
-    { src: "./photo/IMG-20260923-WA0000.jpg", caption: "Happy Birthday Aurora Bebrian! 🎂" }
+  // Foto & momen kenangan untuk Polaroid Line Carousel
+  gallerySlides: [
+    {
+      image: "./photo/IMG_0497.JPG",
+      title: "Araa yang Manis 🤍",
+      caption: "Senyum paling manis dan tulus dari Araa.",
+      palette: "dawn",
+      seed: 7
+    },
+    {
+      image: "./photo/IMG_20260607_121334.jpg",
+      title: "Awal Cerita Indah ✨",
+      caption: "Momen manis yang selalu bikin senyum sendiri.",
+      palette: "alpine",
+      seed: 9
+    },
+    {
+      image: "./photo/IMG-20260616-WA0049.jpg",
+      title: "Spesial Hari Ini ✨",
+      caption: "Hari waktu orang sebaik Araa lahir ke dunia.",
+      palette: "alpine",
+      seed: 12
+    },
+    {
+      image: "./photo/IMG-20260701-WA0085.jpg",
+      title: "Penuh Tawa & Ceria 🌸",
+      caption: "Semoga harinya selalu diringankan dengan senyuman.",
+      palette: "dusk",
+      seed: 14
+    },
+    {
+      image: "./photo/IMG_20260714_181648.jpg",
+      title: "Senja & Dedekkk 🌇",
+      caption: "Tenang kayak sore hari yang gak terburu-buru.",
+      palette: "mist",
+      seed: 16
+    },
+    {
+      image: "./photo/IMG_20260714_182141.jpg",
+      title: "Tetap Bersinar 💫",
+      caption: "Cahaya baik yang selalu terpancar dari Araa.",
+      palette: "dawn",
+      seed: 17
+    },
+    {
+      image: "./photo/IMG_20260715_153054.jpg",
+      title: "Langkah-Langkah Kecil 👣",
+      caption: "Nikmati prosesnya, pelan-pelan asal jalan terus.",
+      palette: "alpine",
+      seed: 19
+    },
+    {
+      image: "./photo/IMG_20260717_175316.jpg",
+      title: "Tatapan Hangat 🤍",
+      caption: "Selalu bawa ketenangan buat orang di sekitar.",
+      palette: "dusk",
+      seed: 21
+    },
+    {
+      image: "./photo/IMG-20260729-WA0002.jpg",
+      title: "Momen Berharga 🌷",
+      caption: "Setiap tawa kecil Araa tuh berharga banget.",
+      palette: "mist",
+      seed: 23
+    },
+    {
+      image: "./photo/IMG-20260731-WA0003.jpg",
+      title: "Tutup Bulan Bahagia 🌻",
+      caption: "Semoga segala lelah berganti jadi hal-hal indah.",
+      palette: "dawn",
+      seed: 26
+    },
+    {
+      image: "./photo/IMG-20260823-WA0003.jpg",
+      title: "Bidadari Baik Hati 🕊️",
+      caption: "Kebaikan Araa bakal selalu nemu jalan pulangnya.",
+      palette: "alpine",
+      seed: 28
+    },
+    {
+      image: "./photo/IMG-20260826-WA0001.jpg",
+      title: "Sayangi Diri Sendiri 🤍",
+      caption: "Perasaan Araa itu berharga, jangan diabaikan yaa.",
+      palette: "dusk",
+      seed: 29
+    },
+    {
+      image: "./photo/IMG-20260827-WA0004.jpg",
+      title: "Bahagia Sederhana 🫧",
+      caption: "Bahagia itu receh kalau hatinya selalu bersyukur.",
+      palette: "mist",
+      seed: 32
+    },
+    {
+      image: "./photo/IMG-20260827-WA0031.jpg",
+      title: "Cantiknya Araa 💖",
+      caption: "Gak perlu pembuktian, Araa udah keren apa adanya.",
+      palette: "dawn",
+      seed: 34
+    },
+    {
+      image: "./photo/IMG-20260828-WA0001.jpg",
+      title: "Waktu Terus Berjalan ⏳",
+      caption: "Tumbuh dengan ritmemu sendiri yaa dedekkk.",
+      palette: "alpine",
+      seed: 36
+    },
+    {
+      image: "./photo/IMG-20260831-WA0022.jpg",
+      title: "Semangat PPL & Kuliah 📚",
+      caption: "Semua usaha dan lelahmu akan berbuah manis.",
+      palette: "dawn",
+      seed: 31
+    },
+    {
+      image: "./photo/IMG-20260903-WA0001.jpg",
+      title: "Awal September Ceria 🍂",
+      caption: "Semoga bulan ini bawa banyak kabar baik buat Araa.",
+      palette: "dusk",
+      seed: 38
+    },
+    {
+      image: "./photo/IMG-20260904-WA0000.jpg",
+      title: "Kuat & Hebat 💪🏻",
+      caption: "Bangga sama Araa yang gak gampang nyerah.",
+      palette: "mist",
+      seed: 40
+    },
+    {
+      image: "./photo/IMG-20260907-WA0001.jpg",
+      title: "Doa Tulus 🤲🏻",
+      caption: "Semoga Allah permudah semua langkah dan urusan Araa.",
+      palette: "dawn",
+      seed: 43
+    },
+    {
+      image: "./photo/IMG-20260909-WA0007.jpg",
+      title: "Banyak Ketawa Yaa 😄",
+      caption: "Dunia makin adem pas liat senyum lepas Araa.",
+      palette: "alpine",
+      seed: 46
+    },
+    {
+      image: "./photo/IMG-20260910-WA0002.jpg",
+      title: "Dikelilingi Orang Baik 🤍",
+      caption: "Didekatkan sama orang yang tulus dan menghargai Araa.",
+      palette: "dusk",
+      seed: 48
+    },
+    {
+      image: "./photo/IMG-20260911-WA0002.jpg",
+      title: "Jangan Lupa Istirahat ☕",
+      caption: "Capek ya rehat, jangan dipaksa perfect terus yaa.",
+      palette: "mist",
+      seed: 51
+    },
+    {
+      image: "./photo/IMG-20260915-WA0002.jpg",
+      title: "Senyum Terus Yaa 🌻",
+      caption: "Semoga harinya makin enteng dan penuh tawa.",
+      palette: "dusk",
+      seed: 18
+    },
+    {
+      image: "./photo/IMG-20260918-WA0000.jpg",
+      title: "Tetap Jadi Diri Sendiri 🌸",
+      caption: "Gak usah ngebuktiin apa-apa ke siapa-siapa.",
+      palette: "mist",
+      seed: 25
+    },
+    {
+      image: "./photo/IMG-20260921-WA0013.jpg",
+      title: "Hati yang Tenang 🤍",
+      caption: "Dikelilingi kebaikan dan orang-orang tulus.",
+      palette: "alpine",
+      seed: 42
+    },
+    {
+      image: "./photo/IMG-20260921-WA0014.jpg",
+      title: "Orang Baik Layak Bahagia 🫶🏻",
+      caption: "Perasaan Araa juga sangat penting, jaga dirimu yaa.",
+      palette: "dusk",
+      seed: 50
+    },
+    {
+      image: "./photo/IMG-20260923-WA0000.jpg",
+      title: "Happy Birthday Araa! 🎂",
+      caption: "Selamat ulang tahun Aurora Bebrian, dedekkk!",
+      palette: "dawn",
+      seed: 77
+    }
   ]
 };
 
@@ -295,71 +476,608 @@ function showSlideTiga() {
 }
 
 // ==========================================
-// 7. SLIDE 4: PENUTUP & GALERI POLAROID
+// 7. POLAROID LINE CAROUSEL (PHYSICS ENGINE)
 // ==========================================
-let currentPhotoIndex = 0;
-let carouselTimer = null;
 
-function updatePolaroidPhoto(index) {
-  const polaroidImg = document.getElementById('polaroidImg');
-  const polaroidCaption = document.getElementById('polaroidCaption');
-  const photoCounter = document.getElementById('photoCounter');
-  const photo = CONFIG.galleryPhotos[index];
-
-  if (!photo || !polaroidImg) return;
-
-  polaroidImg.style.opacity = '0';
-  setTimeout(() => {
-    polaroidImg.src = photo.src;
-    if (polaroidCaption) polaroidCaption.textContent = photo.caption;
-    if (photoCounter) photoCounter.textContent = `${index + 1} / ${CONFIG.galleryPhotos.length}`;
-    polaroidImg.style.opacity = '1';
-  }, 200);
+// #region Helper Math & Physics
+function wrap(i, n) {
+  return n ? ((i % n) + n) % n : 0;
 }
+
+function clamp(v, a, b) {
+  return Math.min(b, Math.max(a, v));
+}
+
+/** Tinggi tali melengkung di titik x dengan lendutan (sag) */
+function stringY(x, w, y0, sag) {
+  const t = clamp(x / w, 0, 1);
+  return y0 + 4 * sag * t * (1 - t);
+}
+
+/** Satu langkah pegas teredam kritis (critically damped spring) */
+function springStep(x, v, target, dt, k = 70) {
+  const c = 2 * Math.sqrt(k);
+  const nv = v + (k * (target - x) - c * v) * dt;
+  return [x + nv * dt, nv];
+}
+
+/** Satu langkah ayunan pendulum polaroid dengan inersia & redaman gravitasi */
+function swingStep(a, w, lineVel, dt, gain) {
+  const nw = w + (-38 * a - 4.2 * w + lineVel * 0.0034 * gain) * dt;
+  return [clamp(a + nw * dt, -0.6, 0.6), nw];
+}
+
+/** Indeks foto terdekat ke bagian tengah layar */
+function nearestAt(off, spacing, n) {
+  if (n <= 0) return 0;
+  const raw = Math.round(off / spacing);
+  return ((raw % n) + n) % n;
+}
+
+function pad2(n) {
+  return n < 10 ? '0' + n : String(n);
+}
+// #endregion
+
+// #region Fallback Painted Landscape (Canvas)
+const PALETTES = {
+  dawn: { top: "#e7b7a5", bottom: "#f8e8d6", sun: "#fff4df", far: "#d2b2bb", near: "#3a2a3b", mist: "255,240,232" },
+  alpine: { top: "#7ea5c8", bottom: "#e3ecf2", sun: "#ffffff", far: "#a9bfd0", near: "#1c3044", mist: "236,244,250" },
+  dusk: { top: "#2a2450", bottom: "#ef8d60", sun: "#ffd9a6", far: "#93607c", near: "#18121f", mist: "255,196,160" },
+  mist: { top: "#c4d0cb", bottom: "#eef1ec", sun: "#ffffff", far: "#aebcb5", near: "#2c3a33", mist: "246,248,245" },
+};
+
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function hexRgb(h) {
+  const v = parseInt(h.replace("#", ""), 16);
+  return [(v >> 16) & 255, (v >> 8) & 255, v & 255];
+}
+
+function mixRgb(a, b, t) {
+  const A = hexRgb(a);
+  const B = hexRgb(b);
+  return "rgb(" + A.map((v, i) => Math.round(v + (B[i] - v) * t)).join(",") + ")";
+}
+
+function paintLandscape(seed, palette = 'dawn', w = 1200, h = 800) {
+  if (typeof document === 'undefined') return '';
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  const g = c.getContext('2d');
+  if (!g) return '';
+  const P = PALETTES[palette] || PALETTES.dawn;
+  const r = mulberry32(seed * 104729 + 7);
+
+  const sky = g.createLinearGradient(0, 0, 0, h * 0.72);
+  sky.addColorStop(0, P.top);
+  sky.addColorStop(1, P.bottom);
+  g.fillStyle = sky;
+  g.fillRect(0, 0, w, h);
+
+  const sx = w * (0.22 + r() * 0.56);
+  const sy = h * (0.26 + r() * 0.16);
+  const halo = g.createRadialGradient(sx, sy, 0, sx, sy, w * 0.45);
+  halo.addColorStop(0, "rgba(" + hexRgb(P.sun).join(",") + ",.85)");
+  halo.addColorStop(0.08, "rgba(" + hexRgb(P.sun).join(",") + ",.55)");
+  halo.addColorStop(1, "rgba(" + hexRgb(P.sun).join(",") + ",0)");
+  g.fillStyle = halo;
+  g.fillRect(0, 0, w, h);
+
+  g.fillStyle = P.sun;
+  g.beginPath();
+  g.arc(sx, sy, h * 0.045, 0, Math.PI * 2);
+  g.fill();
+
+  const layers = 5;
+  for (let L = 0; L < layers; L++) {
+    const k = L / (layers - 1);
+    const base = h * (0.42 + k * 0.4);
+    const amp = h * (0.07 + k * 0.1);
+    const ph = [r(), r(), r(), r()].map((v) => v * Math.PI * 2);
+    const fr = [1.3 + r(), 3.1 + r() * 2, 7 + r() * 4, 17 + r() * 8];
+    const ridge = (x) => {
+      const u = x / w;
+      return (
+        base -
+        amp *
+          (0.55 * Math.sin(u * fr[0] + ph[0]) +
+            0.28 * Math.sin(u * fr[1] + ph[1]) +
+            0.12 * Math.abs(Math.sin(u * fr[2] + ph[2])) +
+            0.05 * Math.sin(u * fr[3] + ph[3]))
+      );
+    };
+
+    const mist = g.createLinearGradient(0, base - amp * 1.4, 0, base + amp * 0.4);
+    mist.addColorStop(0, "rgba(" + P.mist + ",0)");
+    mist.addColorStop(1, "rgba(" + P.mist + "," + (0.55 - k * 0.35).toFixed(2) + ")");
+    g.fillStyle = mist;
+    g.fillRect(0, base - amp * 1.4, w, amp * 1.8);
+
+    const body = g.createLinearGradient(0, base - amp, 0, h);
+    body.addColorStop(0, mixRgb(P.far, P.near, Math.pow(k, 1.3)));
+    body.addColorStop(1, mixRgb(P.far, P.near, Math.min(1, Math.pow(k, 1.3) + 0.18)));
+    g.fillStyle = body;
+    g.beginPath();
+    g.moveTo(0, h);
+    for (let x = 0; x <= w; x += 6) g.lineTo(x, ridge(x));
+    g.lineTo(w, h);
+    g.closePath();
+    g.fill();
+
+    if (L >= layers - 2) {
+      g.fillStyle = mixRgb(P.far, P.near, Math.min(1, Math.pow(k, 1.3) + 0.08));
+      for (let x = 0; x < w; x += 7 + r() * 9) {
+        if (r() < 0.35) continue;
+        const y = ridge(x) + 2;
+        const th = h * (0.025 + r() * 0.035) * (0.6 + k);
+        const tw = th * 0.32;
+        g.beginPath();
+        g.moveTo(x, y - th);
+        g.lineTo(x + tw, y);
+        g.lineTo(x - tw, y);
+        g.closePath();
+        g.fill();
+      }
+    }
+  }
+
+  const vig = g.createRadialGradient(w / 2, h * 0.45, h * 0.3, w / 2, h / 2, w * 0.78);
+  vig.addColorStop(0, "rgba(0,0,0,0)");
+  vig.addColorStop(1, "rgba(0,0,0,.32)");
+  g.fillStyle = vig;
+  g.fillRect(0, 0, w, h);
+
+  const grain = g.getImageData(0, 0, w, h);
+  const d = grain.data;
+  for (let i = 0; i < d.length; i += 4) {
+    const v = (r() - 0.5) * 14;
+    d[i] += v;
+    d[i + 1] += v;
+    d[i + 2] += v;
+  }
+  g.putImageData(grain, 0, 0);
+  return c.toDataURL("image/jpeg", 0.88);
+}
+// #endregion
+
+class PolaroidLineCarousel {
+  constructor(container, options = {}) {
+    this.container = typeof container === 'string' ? document.querySelector(container) : container;
+    if (!this.container) return;
+
+    this.slides = options.slides || [];
+    this.n = this.slides.length;
+    this.cardWidth = options.cardWidth || 220;
+    this.sag = options.sag !== undefined ? options.sag : 40;
+    this.swing = options.swing !== undefined ? options.swing : 1;
+    this.autoplay = options.autoplay !== undefined ? options.autoplay : 4200;
+    this.stringColor = options.stringColor || '#8a7f72';
+    this.onChange = options.onChange;
+
+    this.active = 0;
+    this.activeRef = 0;
+    this.dragging = false;
+    this.size = { w: 600, h: 400, cw: this.cardWidth };
+    this.spacing = this.size.cw * 1.08;
+    this.sim = {
+      off: 0,
+      vel: 0,
+      target: 0,
+      a: new Array(this.n).fill(0),
+      w: new Array(this.n).fill(0)
+    };
+    this.drag = null;
+    this.lastTouch = 0;
+    this.cards = [];
+    this.raf = null;
+    this.autoplayInterval = null;
+    this.isVisible = true;
+
+    this.initDOM();
+    this.initEvents();
+    this.startSimulation();
+    this.startAutoplay();
+  }
+
+  initDOM() {
+    this.container.innerHTML = '';
+    this.root = document.createElement('div');
+    this.root.className = 'pl-root';
+    this.root.setAttribute('tabindex', '0');
+    this.root.setAttribute('role', 'region');
+    this.root.setAttribute('aria-roledescription', 'carousel');
+    this.root.setAttribute('aria-label', 'Galeri Kenangan Polaroid Araa');
+
+    // SVG Clothesline
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'pl-string');
+    svg.setAttribute('aria-hidden', 'true');
+    this.path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    this.path.setAttribute('fill', 'none');
+    this.path.setAttribute('stroke', this.stringColor);
+    this.path.setAttribute('stroke-width', '1.8');
+    this.path.setAttribute('stroke-linecap', 'round');
+    svg.appendChild(this.path);
+    this.root.appendChild(svg);
+
+    // Cards
+    this.cards = [];
+    this.slides.forEach((slide, i) => {
+      const card = document.createElement('div');
+      card.className = 'pl-card';
+      card.setAttribute('data-i', i);
+      card.setAttribute('data-on', i === 0 ? '1' : '0');
+
+      const print = document.createElement('div');
+      print.className = 'pl-print';
+
+      const shot = document.createElement('div');
+      shot.className = 'pl-shot';
+
+      const img = document.createElement('img');
+      img.alt = slide.alt || slide.title || '';
+      img.draggable = false;
+
+      // Handle image source with automatic fallback to painted landscape
+      if (slide.image) {
+        img.src = slide.image;
+        img.onerror = () => {
+          img.src = paintLandscape(slide.seed || (i + 1), slide.palette || 'dawn');
+        };
+      } else {
+        img.src = paintLandscape(slide.seed || (i + 1), slide.palette || 'dawn');
+      }
+
+      shot.appendChild(img);
+      print.appendChild(shot);
+
+      const note = document.createElement('div');
+      note.className = 'pl-note';
+      note.textContent = slide.title || '';
+      print.appendChild(note);
+
+      const peg = document.createElement('div');
+      peg.className = 'pl-peg';
+
+      card.appendChild(print);
+      card.appendChild(peg);
+      this.root.appendChild(card);
+      this.cards.push(card);
+    });
+
+    // Bottom Bar
+    this.bar = document.createElement('div');
+    this.bar.className = 'pl-bar';
+
+    this.cap = document.createElement('div');
+    this.cap.className = 'pl-cap';
+    this.cap.setAttribute('aria-hidden', 'true');
+
+    this.titleEl = document.createElement('span');
+    this.titleEl.className = 'pl-title';
+    this.subEl = document.createElement('span');
+    this.subEl.className = 'pl-sub';
+    this.cap.appendChild(this.titleEl);
+    this.cap.appendChild(this.subEl);
+
+    this.countEl = document.createElement('span');
+    this.countEl.className = 'pl-count';
+    this.countEl.setAttribute('aria-hidden', 'true');
+
+    this.prevBtn = document.createElement('button');
+    this.prevBtn.type = 'button';
+    this.prevBtn.className = 'pl-btn';
+    this.prevBtn.setAttribute('aria-label', 'Foto Sebelumnya');
+    this.prevBtn.innerHTML = '<i class="fas fa-chevron-left" style="font-size: 13px;"></i>';
+
+    this.nextBtn = document.createElement('button');
+    this.nextBtn.type = 'button';
+    this.nextBtn.className = 'pl-btn';
+    this.nextBtn.setAttribute('aria-label', 'Foto Selanjutnya');
+    this.nextBtn.innerHTML = '<i class="fas fa-chevron-right" style="font-size: 13px;"></i>';
+
+    this.bar.appendChild(this.cap);
+    this.bar.appendChild(this.countEl);
+    this.bar.appendChild(this.prevBtn);
+    this.bar.appendChild(this.nextBtn);
+    this.root.appendChild(this.bar);
+
+    // Screen reader live region
+    this.sr = document.createElement('div');
+    this.sr.className = 'pl-sr';
+    this.sr.setAttribute('aria-live', 'polite');
+    this.root.appendChild(this.sr);
+
+    this.container.appendChild(this.root);
+    this.updateCaption(0);
+    this.updateSize();
+  }
+
+  updateSize() {
+    if (!this.root) return;
+    const r = this.root.getBoundingClientRect();
+    if (r.width === 0 || r.height === 0) return;
+    const cw = Math.round(Math.max(150, Math.min(this.cardWidth, r.width * 0.44, r.height * 0.44)));
+    this.size = { w: r.width, h: r.height, cw };
+    this.spacing = cw * 1.08;
+    this.root.style.setProperty('--pl-cw', cw + 'px');
+    this.sim.target = this.activeRef * this.spacing;
+    this.sim.off = this.activeRef * this.spacing;
+  }
+
+  updateCaption(index) {
+    const slide = this.slides[index] || {};
+    this.titleEl.textContent = slide.title || '';
+    this.subEl.textContent = slide.caption || '';
+    this.countEl.innerHTML = `<b>${pad2(index + 1)}</b> / ${pad2(this.n)}`;
+    this.sr.textContent = `Foto ${index + 1} dari ${this.n}: ${slide.title || ''}`;
+
+    // Refresh animation
+    this.cap.style.animation = 'none';
+    void this.cap.offsetWidth;
+    this.cap.style.animation = '';
+  }
+
+  goTo(i) {
+    this.sim.target = i * this.spacing;
+  }
+
+  step(dir) {
+    this.lastTouch = performance.now();
+    const currentSlot = Math.round(this.sim.target / this.spacing);
+    this.goTo(currentSlot + dir);
+  }
+
+  initEvents() {
+    // Resize Observer
+    if (typeof ResizeObserver !== 'undefined') {
+      this.ro = new ResizeObserver(() => {
+        this.updateSize();
+      });
+      this.ro.observe(this.root);
+    }
+
+    // Intersection Observer
+    if (typeof IntersectionObserver !== 'undefined') {
+      this.io = new IntersectionObserver(([entry]) => {
+        this.isVisible = entry.isIntersecting;
+      });
+      this.io.observe(this.root);
+    }
+
+    // Navigation Buttons
+    this.prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.step(-1);
+    });
+    this.nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.step(1);
+    });
+
+    // Keyboard Arrow Keys
+    this.root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        this.step(1);
+        e.preventDefault();
+      } else if (e.key === 'ArrowLeft') {
+        this.step(-1);
+        e.preventDefault();
+      }
+    });
+
+    // Pointer Dragging
+    const onDown = (e) => {
+      if (e.target.closest('.pl-bar')) return;
+      this.lastTouch = performance.now();
+      this.drag = {
+        x: e.clientX,
+        off: this.sim.off,
+        lx: e.clientX,
+        lt: e.timeStamp,
+        v: 0,
+        moved: false,
+        pointerId: e.pointerId
+      };
+    };
+
+    const onMove = (e) => {
+      const d = this.drag;
+      if (!d || d.pointerId !== e.pointerId) return;
+      const dx = e.clientX - d.x;
+
+      if (!d.moved && Math.abs(dx) > 5) {
+        d.moved = true;
+        this.dragging = true;
+        this.root.setAttribute('data-drag', '1');
+        try {
+          this.root.setPointerCapture(e.pointerId);
+        } catch (_) {}
+      }
+
+      if (!d.moved) return;
+
+      const dt = Math.max(1, e.timeStamp - d.lt);
+      d.v = 0.7 * ((e.clientX - d.lx) / dt) + 0.3 * d.v;
+      d.lx = e.clientX;
+      d.lt = e.timeStamp;
+
+      // Bebas geser tanpa batas (infinite loop)
+      this.sim.off = d.off - dx;
+    };
+
+    const onUp = (e) => {
+      const d = this.drag;
+      if (!d || d.pointerId !== e.pointerId) return;
+      this.drag = null;
+      this.lastTouch = performance.now();
+
+      try {
+        this.root.releasePointerCapture(e.pointerId);
+      } catch (_) {}
+
+      if (d.moved) {
+        this.dragging = false;
+        this.root.setAttribute('data-drag', '0');
+        this.sim.vel = -d.v * 1000;
+        const targetSlot = Math.round((this.sim.off - d.v * 180) / this.spacing);
+        this.goTo(targetSlot);
+        return;
+      }
+
+      const card = e.target.closest('[data-i]');
+      if (card) {
+        const clickedIdx = Number(card.getAttribute('data-i'));
+        const currentSlot = Math.round(this.sim.off / this.spacing);
+        const currentNorm = ((currentSlot % this.n) + this.n) % this.n;
+        let diff = clickedIdx - currentNorm;
+        if (diff > this.n / 2) diff -= this.n;
+        if (diff < -this.n / 2) diff += this.n;
+        this.goTo(currentSlot + diff);
+      }
+    };
+
+    this.root.addEventListener('pointerdown', onDown);
+    this.root.addEventListener('pointermove', onMove);
+    this.root.addEventListener('pointerup', onUp);
+    this.root.addEventListener('pointercancel', onUp);
+  }
+
+  startSimulation() {
+    const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let prev = performance.now();
+
+    const frame = (now) => {
+      this.raf = requestAnimationFrame(frame);
+      if (!this.isVisible) return;
+
+      const dt = Math.min(0.033, (now - prev) / 1000);
+      prev = now;
+
+      const { w, h, cw } = this.size;
+      const y0 = Math.max(35, h * 0.18);
+      const d = this.drag;
+      const S = this.sim;
+
+      let lineVel;
+      if (d && d.moved) {
+        lineVel = d.v * 1000;
+      } else {
+        const before = S.off;
+        [S.off, S.vel] = springStep(S.off, S.vel, S.target, dt);
+        lineVel = -(S.off - before) / Math.max(dt, 1e-3);
+      }
+
+      const g = reduce ? 0 : this.swing;
+      const near = nearestAt(S.off, this.spacing, this.n);
+      const L = this.n * this.spacing;
+
+      for (let i = 0; i < this.n; i++) {
+        const el = this.cards[i];
+        if (!el) continue;
+
+        // Wrap posisi modular untuk circular clothesline
+        let rel = (i * this.spacing - S.off) % L;
+        if (rel < -L / 2) rel += L;
+        else if (rel >= L / 2) rel -= L;
+
+        const x = w / 2 + rel;
+        if (x < -cw * 1.5 || x > w + cw * 1.5) {
+          el.style.visibility = 'hidden';
+          continue;
+        }
+
+        el.style.visibility = 'visible';
+        let a = S.a[i] || 0;
+        let av = S.w[i] || 0;
+        [a, av] = swingStep(a, av, lineVel, dt, g);
+        if (g) a += Math.sin(now / 1300 + i * 1.7) * 0.0009 * g;
+        S.a[i] = a;
+        S.w[i] = av;
+
+        const y = stringY(x, w, y0, this.sag) - 6;
+        el.style.transform = `translate(${(x - cw / 2).toFixed(1)}px, ${y.toFixed(1)}px) rotate(${a.toFixed(4)}rad)`;
+        el.style.zIndex = String(i === near ? this.n + 1 : Math.max(1, Math.round(this.n - Math.abs(rel / this.spacing))));
+        el.setAttribute('data-on', i === near ? '1' : '0');
+      }
+
+      // Normalisasi S.off & S.target saat diam agar floating point tetap presisi
+      if (!this.dragging && Math.abs(S.vel) < 0.5 && Math.abs(S.off - S.target) < 0.5) {
+        const k = Math.floor(S.off / L);
+        if (k !== 0) {
+          S.off -= k * L;
+          S.target -= k * L;
+        }
+      }
+
+      if (this.path) {
+        this.path.setAttribute('d', `M0 ${y0} Q${w / 2} ${y0 + 2 * this.sag} ${w} ${y0}`);
+      }
+
+      if (near !== this.activeRef) {
+        this.activeRef = near;
+        this.active = near;
+        this.updateCaption(near);
+        if (this.onChange) this.onChange(near);
+      }
+    };
+
+    this.raf = requestAnimationFrame(frame);
+  }
+
+  startAutoplay() {
+    if (!this.autoplay || this.n < 2) return;
+    this.autoplayInterval = setInterval(() => {
+      if (document.hidden || this.drag || performance.now() - this.lastTouch < this.autoplay) return;
+      this.step(1);
+    }, this.autoplay);
+  }
+
+  destroy() {
+    if (this.raf) cancelAnimationFrame(this.raf);
+    if (this.autoplayInterval) clearInterval(this.autoplayInterval);
+    if (this.ro) this.ro.disconnect();
+    if (this.io) this.io.disconnect();
+  }
+}
+
+// Inisialisasi Slide 4 & Carousel
+let polaroidCarouselInstance = null;
 
 function showSlideEmpat() {
   const slideEmpat = document.getElementById('slideLima'); // ID slideLima di HTML
-  const prevBtn = document.getElementById('prevPhoto');
-  const nextBtn = document.getElementById('nextPhoto');
-
   if (!slideEmpat) return;
   slideEmpat.classList.remove('d-none');
 
-  // Inisialisasi foto pertama
-  currentPhotoIndex = 0;
-  updatePolaroidPhoto(currentPhotoIndex);
-
-  // Navigasi manual
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      currentPhotoIndex = (currentPhotoIndex - 1 + CONFIG.galleryPhotos.length) % CONFIG.galleryPhotos.length;
-      updatePolaroidPhoto(currentPhotoIndex);
-      resetAutoPlay();
-    });
+  const container = document.getElementById('polaroidLineCarousel');
+  if (container) {
+    if (!polaroidCarouselInstance) {
+      polaroidCarouselInstance = new PolaroidLineCarousel(container, {
+        slides: CONFIG.gallerySlides,
+        cardWidth: 220,
+        sag: 40,
+        swing: 1,
+        autoplay: 4200,
+        stringColor: '#8a7f72'
+      });
+    }
+    setTimeout(() => {
+      if (polaroidCarouselInstance) {
+        polaroidCarouselInstance.updateSize();
+      }
+    }, 80);
   }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      currentPhotoIndex = (currentPhotoIndex + 1) % CONFIG.galleryPhotos.length;
-      updatePolaroidPhoto(currentPhotoIndex);
-      resetAutoPlay();
-    });
-  }
-
-  // Auto-slideshow polaroid setiap 4 detik
-  function startAutoPlay() {
-    carouselTimer = setInterval(() => {
-      currentPhotoIndex = (currentPhotoIndex + 1) % CONFIG.galleryPhotos.length;
-      updatePolaroidPhoto(currentPhotoIndex);
-    }, 4000);
-  }
-
-  function resetAutoPlay() {
-    if (carouselTimer) clearInterval(carouselTimer);
-    startAutoPlay();
-  }
-
-  startAutoPlay();
 }
 
 // ==========================================

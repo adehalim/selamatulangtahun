@@ -431,129 +431,322 @@ html {
 }
 
 /* =========================================
-   Slide 4: Closing & Polaroid Gallery
+   Slide 4: Closing & Polaroid Line Carousel
    ========================================= */
 .closing-card {
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 28px;
-  padding: 28px 20px 24px;
-  max-width: 480px;
+  padding: 26px 18px 22px;
+  max-width: 680px;
   width: 95%;
   margin: auto;
   box-shadow: 0 18px 45px rgba(220, 80, 120, 0.22);
   border: 1px solid rgba(255, 255, 255, 0.85);
+  text-align: center;
 }
 
 .heart-pulse-box {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .closing-message h4 {
   font-weight: 700;
   color: #333;
   font-size: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .closing-desc {
   font-size: 14px;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .closing-sender {
   display: inline-block;
   font-weight: 700;
   color: #e83e8c;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
-/* Polaroid Card */
-.polaroid-section {
-  margin-bottom: 18px;
+/* Polaroid Line Carousel Container */
+.polaroid-line-section {
+  position: relative;
+  width: 100%;
+  margin: 10px 0 16px;
 }
 
-.polaroid-wrapper {
+.carousel-drag-hint {
+  font-size: 12px;
+  color: #96867d;
+  margin-bottom: 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2px;
 }
 
-.polaroid-card {
-  background: #ffffff;
-  padding: 12px 12px 18px;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
-  max-width: 310px;
+.carousel-drag-hint i {
+  color: #e83e8c;
+}
+
+.polaroid-carousel-container {
   width: 100%;
-  transform: rotate(-1.5deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #eee;
 }
 
-.polaroid-card:hover {
-  transform: rotate(0deg) scale(1.02);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
-}
-
-.polaroid-photo-box {
+.pl-root {
+  position: relative;
   width: 100%;
-  height: 250px;
+  height: 400px;
   overflow: hidden;
-  border-radius: 4px;
-  background: #f7f7f7;
+  background: var(--pl-bg, linear-gradient(180deg, #fdfbf7 0%, #f6f1e8 100%));
+  color: var(--pl-ink, #25221e);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  outline: none;
+  cursor: grab;
+  border-radius: 20px;
+  border: 1px solid rgba(220, 208, 196, 0.7);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03), 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
-.polaroid-photo-box img {
+.pl-root[data-drag='1'] {
+  cursor: grabbing;
+}
+
+.pl-root:focus-visible {
+  box-shadow: inset 0 0 0 2px #e83e8c;
+}
+
+.pl-string {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.pl-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--pl-cw, 220px);
+  transform-origin: 50% 0;
+  will-change: transform;
+  cursor: inherit;
+}
+
+.pl-print {
+  margin-top: 10px;
+  background: #ffffff;
+  padding: 10px 10px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 16px 26px -12px rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.5s ease, box-shadow 0.5s ease;
+}
+
+.pl-card[data-on='0'] .pl-print {
+  transform: scale(0.88);
+  filter: saturate(0.75) brightness(0.94);
+  opacity: 0.82;
+}
+
+.pl-card[data-on='1'] .pl-print {
+  box-shadow: 0 4px 12px rgba(232, 62, 140, 0.2), 0 20px 35px -12px rgba(0, 0, 0, 0.42);
+}
+
+.pl-shot {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #eae5dc;
+  border-radius: 3px;
+}
+
+.pl-shot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
   object-fit: cover;
-  transition: opacity 0.3s ease;
+  display: block;
+  pointer-events: none;
 }
 
-.polaroid-caption {
-  font-family: 'Handlee', 'Caveat', cursive;
+.pl-note {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  font-family: 'Caveat', 'Handlee', cursive;
   font-size: 16px;
-  color: #444;
-  margin: 12px 0 0;
-  text-align: center;
+  font-weight: 600;
+  color: #38342e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.polaroid-nav {
+.pl-peg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 11px;
+  height: 28px;
+  margin-left: -5.5px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #c49d6f, #e8cca6 45%, #b38954);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.32);
+  z-index: 5;
+}
+
+.pl-peg::after {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  top: 9px;
+  width: 2px;
+  height: 8px;
+  background: rgba(70, 50, 25, 0.45);
+  border-radius: 1px;
+}
+
+.pl-bar {
+  position: absolute;
+  left: clamp(10px, 3vw, 24px);
+  right: clamp(10px, 3vw, 24px);
+  bottom: clamp(10px, 2.5vh, 18px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 14px;
+  gap: clamp(8px, 1.5vw, 16px);
+  cursor: default;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
 }
 
-.btn-nav {
-  background: #fff;
-  border: 1px solid #ffd1dc;
-  color: #e83e8c;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.2s ease;
+.pl-cap {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  padding-bottom: 0.15em;
+  text-align: left;
 }
 
-.btn-nav:hover {
-  background: #ffe3e8;
-  transform: scale(1.1);
+.pl-cap > * {
+  display: block;
+  animation: pl-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
-.photo-counter {
-  font-size: 12px;
+.pl-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(13px, 1.8vw, 16px);
   font-weight: 700;
-  color: #777;
+  color: #2b2725;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pl-sub {
+  margin-top: 2px;
+  font-family: 'Handlee', 'Caveat', cursive;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #e83e8c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pl-count {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #887d75;
+  white-space: nowrap;
+}
+
+.pl-count b {
+  color: #e83e8c;
+  font-weight: 700;
+}
+
+.pl-btn {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 62, 140, 0.25);
+  background: #ffffff;
+  color: #e83e8c;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+.pl-btn:hover {
+  background: #e83e8c;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.pl-btn:active {
+  transform: scale(0.92);
+}
+
+.pl-btn:focus-visible {
+  outline: 2px solid #e83e8c;
+  outline-offset: 2px;
+}
+
+.pl-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@keyframes pl-in {
+  from {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-cap > * {
+    animation: none;
+  }
+  .pl-print {
+    transition: none;
+  }
 }
 
 .final-wish {
@@ -601,7 +794,14 @@ html {
     line-height: 28px;
   }
   
-  .polaroid-photo-box {
-    height: 210px;
+  .closing-card {
+    padding: 20px 12px 18px;
+    width: 98%;
+    border-radius: 22px;
+  }
+
+  .pl-root {
+    height: 360px;
+    border-radius: 16px;
   }
 }
